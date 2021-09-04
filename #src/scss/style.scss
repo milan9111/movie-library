@@ -58,6 +58,180 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 @import 'fonts';
 
+.header {
+
+	&__body {
+	}
+}
+.main {
+}
+.name-user {
+	display: none;
+
+	&__body {
+	}
+
+	&__form {
+	}
+
+	&__title {
+	}
+
+	&__input {
+	}
+
+	&__submit {
+	}
+}
+.form {
+}
+.greetings {
+	display: none;
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__subtitle {
+	}
+
+	&__btn {
+	}
+}
+.btn {
+}
+.film-genre {
+	display: none;
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__input {
+	}
+
+	&__item {
+
+		&_drama {
+		}
+
+		&_adventure {
+		}
+
+		&_fantastic {
+		}
+
+		&_comedy {
+		}
+
+		&_action {
+		}
+
+		&_animation {
+		}
+
+		&_history {
+		}
+
+		&_criminal {
+		}
+
+		&_fantasy {
+		}
+
+		&_thriller {
+		}
+
+		&_horror {
+		}
+	}
+
+	&__btn {
+	}
+}
+.title {
+}
+.release-year {
+	display: none;
+}
+.realese-year {
+	
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__form {
+	}
+
+	&__submit {
+	}
+
+	&__btn {
+	}
+}
+.selected-films {
+	display: none;
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__row {
+	}
+
+	&__colum {
+	}
+
+	&__img {
+	}
+
+	&__btn {
+	}
+}
+.information {
+	display: none;
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__img {
+	}
+
+	&__year {
+	}
+
+	&__country {
+	}
+
+	&__director {
+	}
+
+	&__actors {
+	}
+
+	&__plot {
+	}
+
+	&__trailer {
+	}
+
+	&__facts {
+	}
+	&__btn {
+		
+	}
+}
+
+.active-block {
+	display: block;
+}
 
  
 

@@ -100,3 +100,31 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+.name-user {
+  display: none;
+}
+
+.greetings {
+  display: none;
+}
+
+.film-genre {
+  display: none;
+}
+
+.release-year {
+  display: none;
+}
+
+.selected-films {
+  display: none;
+}
+
+.information {
+  display: none;
+}
+
+.active-block {
+  display: block;
+}
