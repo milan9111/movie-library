@@ -585,3 +585,4 @@ const data = [
         facts: 'Факты'
     },         
 ];
+

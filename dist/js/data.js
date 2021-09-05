@@ -1,20 +1,3 @@
-function testWebP(callback) {
-    var webP = new Image();
-        webP.onload = webP.onerror = function () {
-        callback(webP.height == 2);
-        };
-            webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-    
-testWebP(function(support){
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    } else {
-        document.querySelector('body').classList.add('no-webp');
-    }
-});
-
-//===================================================================
 const data = [
     {
         id: '1',
@@ -22,7 +5,6 @@ const data = [
         movie: 'Зелёная миля/The Green Mile',
         image: 'img/green_mile.jpg',
         year: 1999,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Фрэнк Дарабонт',
         actors: 'Том Хэнкс, Дэвид Морс, Майкл Кларк Дункан',
@@ -36,7 +18,6 @@ const data = [
         movie: 'Побег из Шоушенка/The Shawshank Redemption',
         image: 'img/shawshank_redemption.jpg',
         year: 1994,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Фрэнк Дарабонт',
         actors: 'Тим Роббинс, Морган Фриман, Боб Гантон',
@@ -50,7 +31,6 @@ const data = [
         movie: 'Властелин колец: Возвраще́ние короля́/The Lord of the Rings: The Return of the King',
         image: 'img/lord_of_the_rings_the_return_of_the_king.jpg',
         year: 2003,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Питер Джексон',
         actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Астин',
@@ -64,7 +44,6 @@ const data = [
         movie: 'Властелин колец: Две крепости/The Lord of the Rings: The Two Towers',
         image: 'img/lord_of_the_rings_two_towers.jpg',
         year: 2002,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Питер Джексон',
         actors: 'Элайджа Вуд, Вигго Мортенсен, Шон Астин',
@@ -78,7 +57,6 @@ const data = [
         movie: 'Властелин колец: Бра́тство Кольца/The Lord of the Rings: The Fellowship of the Ring',
         image: 'img/lord_of_the_rings_fellowship.jpg',
         year: 2001,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Питер Джексон',
         actors: 'Элайджа Вуд, Иэн Маккеллен, Вигго Мортенсен',
@@ -92,7 +70,6 @@ const data = [
         movie: 'Форрест Гамп/Forrest Gump',
         image: 'img/forrest_gump.jpg',
         year: 1994,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Роберт Земекис',
         actors: 'Том Хэнкс, Робин Райт, Гэри Синиз',
@@ -106,7 +83,6 @@ const data = [
         movie: 'Король Лев/The Lion King',
         image: 'img/lion_king.jpg',
         year: 1994,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Роджер Аллерс',
         actors: '-',
@@ -120,7 +96,6 @@ const data = [
         movie: 'Карты, деньги, два ствола/Lock, Stock and Two Smoking Barrels',
         image: 'img/lock_stock_and_two_smoking.jpg',
         year: 1998,
-        yearforfilter: 90, 
         country: 'Great Britain',
         director: 'Гай Ричи',
         actors: 'Ник Моран, Джейсон Флеминг, Декстер Флетчер',
@@ -134,7 +109,6 @@ const data = [
         movie: 'ВАЛЛ-И/WALL-E',
         image: 'img/WALL-E.png',
         year: 2008,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Эндрю Стэнтон',
         actors: '-',
@@ -148,7 +122,6 @@ const data = [
         movie: 'Список Шиндлера/Schindlers List',
         image: 'img/schindlers_list.jpg',
         year: 1993,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Стивен Спилберг',
         actors: 'Лиам Нисон, Бен Кингсли, Рэйф Файнс',
@@ -162,7 +135,6 @@ const data = [
         movie: 'Большой куш/Snatch',
         image: 'img/snatch.jpg',
         year: 2000,
-        yearforfilter: 0, 
         country: 'Great Britain',
         director: 'Гай Ричи',
         actors: 'Джейсон Стейтем, Бенисио дель Торо, Стивен Грэм',
@@ -176,7 +148,6 @@ const data = [
         movie: 'Криминальное чтиво/Pulp Fiction',
         image: 'img/pulp_fiction.jpg',
         year: 1994,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Квентин Тарантино',
         actors: 'Джон Траволта, Сэмюэл Л. Джексон, Брюс Уиллис',
@@ -190,7 +161,6 @@ const data = [
         movie: 'Назад в будущее/Back to the Future',
         image: 'img/bttf.jpg',
         year: 1985,
-        yearforfilter: 80, 
         country: 'USA',
         director: 'Роберт Земекис',
         actors: 'Майкл Джей Фокс, Кристофер Ллойд, Криспин Гловер',
@@ -204,7 +174,6 @@ const data = [
         movie: '1+1/Intouchables',
         image: 'img/intouchables.jpg',
         year: 2011,
-        yearforfilter: 10, 
         country: 'France',
         director: 'Оливье Накаш',
         actors: 'Франсуа Клюзе, Омар Си',
@@ -218,7 +187,6 @@ const data = [
         movie: 'Пираты Карибского моря: Проклятие Чёрной жемчужины/Pirates of the Caribbean: The Curse of The Black Pearl',
         image: 'img/pirates_of_the_caribbean.jpg',
         year: 2003,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Гор Вербински',
         actors: 'Джонни Депп, Орландо Блум, Кира Найтли',
@@ -232,7 +200,6 @@ const data = [
         movie: 'Матрица/The Matrix',
         image: 'img/matrix.jpg',
         year: 1999,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'братья Вачовски',
         actors: 'Киану Ривз, Лоуренс Фишборн, Керри-Энн Мосс',
@@ -246,7 +213,6 @@ const data = [
         movie: 'Остров проклятых/Shutter Island',
         image: 'img/shutter_island.jpg',
         year: 2010,
-        yearforfilter: 10, 
         country: 'USA',
         director: 'Мартин Скорсезе',
         actors: 'Леонардо Ди Каприо, Марк Руффало, Бен Кингсли',
@@ -260,7 +226,6 @@ const data = [
         movie: 'Достучаться до небес/Knockin On Heavens Door',
         image: 'img/knockin_on_heavens_door.jpg',
         year: 1997,
-        yearforfilter: 90, 
         country: 'Germany',
         director: 'Томас Ян',
         actors: 'Тиль Швайгер, Ян Йозеф Лиферс, Мориц Блайбтрой',
@@ -274,7 +239,6 @@ const data = [
         movie: 'Джентльмены/The Gentlemen',
         image: 'img/gentlemen.jpg',
         year: 2019,
-        yearforfilter: 10, 
         country: 'Great Britain',
         director: 'Гай Ричи',
         actors: 'Чарли Ханнэм, Генри Голдинг, Мишель Докери',
@@ -288,7 +252,6 @@ const data = [
         movie: 'Бойцовский клуб/Fight Club',
         image: 'img/fight_club.jpg',
         year: 1999,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Дэвид Финчер',
         actors: 'Эдвард Нортон, Брэд Питт, Хелена Бонэм Картер',
@@ -302,7 +265,6 @@ const data = [
         movie: 'Шрек/Shrek',
         image: 'img/shrek.jpg',
         year: 2001,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Эндрю Адамсон',
         actors: '-',
@@ -316,7 +278,6 @@ const data = [
         movie: 'Душа/Soul',
         image: 'img/soul.jpg',
         year: 2020,
-        yearforfilter: 10, 
         country: 'USA',
         director: 'Пит Доктер',
         actors: '-',
@@ -330,7 +291,6 @@ const data = [
         movie: 'Невидимая сторона/The Blind Side',
         image: 'img/blind_side.jpg',
         year: 2009,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Джон Ли Хэнкок',
         actors: 'Сандра Буллок, Тим Макгро, Куинтон Аарон',
@@ -344,7 +304,6 @@ const data = [
         movie: 'Престиж/The Prestige',
         image: 'img/prestige.jpg',
         year: 2006,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Кристофер Нолан',
         actors: 'Хью Джекман, Кристиан Бейл, Скарлетт Йоханссон',
@@ -358,7 +317,6 @@ const data = [
         movie: 'Один дома/Home Alone',
         image: 'img/home_alone.jpg',
         year: 1990,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Крис Коламбус',
         actors: 'Маколей Калкин, Джо Пеши, Дэниел Стерн',
@@ -372,7 +330,6 @@ const data = [
         movie: 'Тёмный рыцарь/The Dark Knight',
         image: 'img/dark_knigth.jpg',
         year: 2008,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Кристофер Нолан',
         actors: 'Кристиан Бейл, Хит Леджер, Гэри Олдмен',
@@ -386,7 +343,6 @@ const data = [
         movie: 'Терминатор 2: Су́дный день/Terminator 2: Judgment Day',
         image: 'img/terminator2.jpg',
         year: 1991,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Джеймс Кэмерон',
         actors: 'Арнольд Шварценеггер, Линда Хэмилтон, Эдвард Фёрлонг',
@@ -400,7 +356,6 @@ const data = [
         movie: 'Назад в будущее 2/Back To The Future, Part II',
         image: 'img/back_to_future_part_2.jpg',
         year: 1989,
-        yearforfilter: 80, 
         country: 'USA',
         director: 'Роберт Земекис',
         actors: 'Майкл Джей Фокс, Кристофер Ллойд, Томас Ф. Уилсон',
@@ -414,7 +369,6 @@ const data = [
         movie: 'Гарри Поттер и узник Азкабана/Harry Potter and the Prisoner of Azkaban',
         image: 'img/harry_potter_and_the_prisoner_of_azkaban.jpg',
         year: 2004,
-        yearforfilter: 0, 
         country: 'Great Britain',
         director: 'Альфонсо Куарон',
         actors: 'Дэниел Рэдклифф, Руперт Гринт, Эмма Уотсон',
@@ -428,7 +382,6 @@ const data = [
         movie: 'Одержимость/Whiplash',
         image: 'img/whiplash.jpg',
         year: 2014,
-        yearforfilter: 10, 
         country: 'USA',
         director: 'Дэмьен Шазелл',
         actors: 'Майлз Теллер, Дж. К. Симмонс',
@@ -442,7 +395,6 @@ const data = [
         movie: 'Твоё имя/Your Name',
         image: 'img/kimi_no_na_wa.jpg',
         year: 2016,
-        yearforfilter: 10, 
         country: 'Japan',
         director: 'Макото Синкай',
         actors: '-',
@@ -456,7 +408,6 @@ const data = [
         movie: 'Леон/Leon',
         image: 'img/leon.jpg',
         year: 1994,
-        yearforfilter: 90, 
         country: 'France',
         director: 'Люк Бессон',
         actors: 'Жан Рено, Натали Портман, Гэри Олдмен',
@@ -470,7 +421,6 @@ const data = [
         movie: 'Гарри Поттер и философский камень/Harry Potter and the Philosopher’s Stone',
         image: 'img/harry_potter_and_the_philosophers_stone.jpg',
         year: 2001,
-        yearforfilter: 0, 
         country: 'Great Britain',
         director: 'Крис Коламбус',
         actors: 'Дэниел Рэдклифф, Руперт Гринт, Эмма Уотсон',
@@ -484,7 +434,6 @@ const data = [
         movie: 'Джанго освобождённый/Django Unchained',
         image: 'img/django_unchained.jpg',
         year: 2012,
-        yearforfilter: 10, 
         country: 'USA',
         director: 'Квентин Тарантино',
         actors: 'Джейми Фокс, Кристоф Вальц, Леонардо Ди Каприо',
@@ -498,7 +447,6 @@ const data = [
         movie: 'Гладиатор/Gladiator',
         image: 'img/gladiator.jpg',
         year: 2000,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Ридли Скотт',
         actors: 'Рассел Кроу, Хоакин Феникс, Конни Нилсен',
@@ -512,7 +460,6 @@ const data = [
         movie: 'Отступники/The Departed',
         image: 'img/departed.jpg',
         year: 2006,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Мартин Скорсезе',
         actors: 'Леонардо Ди Каприо, Мэтт Деймон, Джек Николсон',
@@ -526,7 +473,6 @@ const data = [
         movie: 'Зелёная книга/Green Book',
         image: 'img/green_book.jpg',
         year: 2018,
-        yearforfilter: 10, 
         country: 'USA',
         director: 'Питер Фаррелли',
         actors: 'Вигго Мортенсен, Махершала Али',
@@ -540,7 +486,6 @@ const data = [
         movie: 'Молчание ягнят/The Silence of the Lambs',
         image: 'img/the_silence_of_the_lambs.jpg',
         year: 1991,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Джонатан Демми',
         actors: 'Энтони Хопкинс, Джоди Фостер, Скотт Гленн',
@@ -554,7 +499,6 @@ const data = [
         movie: 'Волк с Уолл-стрит/The Wolf of Wall Street',
         image: 'img/the_wolf_of_wall_street.jpg',
         year: 2013,
-        yearforfilter: 10, 
         country: 'USA',
         director: 'Мартин Скорсезе',
         actors: 'Леонардо Ди Каприо, Джона Хилл, Марго Робби',
@@ -568,7 +512,6 @@ const data = [
         movie: 'Корпорация монстров/Monsters, Inc',
         image: 'img/monsters.jpg',
         year: 2001,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Пит Доктер',
         actors: '-',
@@ -582,7 +525,6 @@ const data = [
         movie: 'Рататуй/Ratatouille',
         image: 'img/ratatui.jpg',
         year: 2007,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Брэд Бёрд',
         actors: '-',
@@ -596,7 +538,6 @@ const data = [
         movie: 'Поймай меня, если сможешь/Catch Me If You Can',
         image: 'img/catch_me_if_you_can.jpg',
         year: 2002,
-        yearforfilter: 0, 
         country: 'USA',
         director: 'Стивен Спилберг',
         actors: 'Леонардо Ди Каприо, Том Хэнкс, Кристофер Уокен',
@@ -610,7 +551,6 @@ const data = [
         movie: 'Укрощение строптивого/Il bisbetico domato',
         image: 'img/il_bisbetico_domato.jpg',
         year: 1980,
-        yearforfilter: 80, 
         country: 'Italy',
         director: 'Кастеллано и Пиполо',
         actors: 'Адриано Челентано, Орнелла Мути',
@@ -624,7 +564,6 @@ const data = [
         movie: 'Стальной гигант/The Iron Giant',
         image: 'img/iron_giant.jpg',
         year: 1999,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Брэд Бёрд',
         actors: '-',
@@ -638,7 +577,6 @@ const data = [
         movie: 'Титаник/Titanic',
         image: 'img/titanic.png',
         year: 1997,
-        yearforfilter: 90, 
         country: 'USA',
         director: 'Джеймс Кэмерон',
         actors: 'Леонардо Ди Каприо, Кейт Уинслет, Билли Зейн',
@@ -648,169 +586,3 @@ const data = [
     },         
 ];
 
-
-//===================================================================
-
-
-
-// let dataURL = 'https://api.jsonbin.io/b/6134f9b2dfe0cf16eb558ebe';
-
-// async function loadData() {
-//     try {
-//         const response = await fetch(dataURL);
-//         const data = await response.json();
-//     } catch (e) {
-//         console.error(e);
-//     } 
-// }
-// loadData();
-
-
-const nameUser = document.querySelector('.name-user'); 
-const greetings = document.querySelector('.greetings'); 
-const filmGenre = document.querySelector('.film-genre'); 
-const releaseYear = document.querySelector('.release-year'); 
-const selectedFilms = document.querySelector('.selected-films'); 
-const information = document.querySelector('.information'); 
-
-const nameUserSubmit = document.querySelector('.name-user__submit');
-const greetingsBtn = document.querySelector('.greetings__btn');
-const filmGenreBtn = document.querySelector('.film-genre__btn');
-const realeseYearSubmit = document.querySelector('.realese-year__submit');
-const realeseYearBtn = document.querySelector('.realese-year__btn');
-const selectedFilmsBtn = document.querySelector('.selected-films__btn');
-const informationBtn = document.querySelector('.information__btn');
-
-const nameUserInput = document.querySelector('.name-user__input');
-
-let greetingsTitle = document.querySelector('.greetings__title');
-let greetingsTitleUser = '';
-
-const filmGenreItem = document.querySelectorAll('.film-genre__item');
-let arrFilmGenre = [];
-
-const realeseYearOption = document.querySelector('.realese-year__option');
-let arrRealeseYear = [];
-
-let resultArrGenre = [];
-let resultArrGenreAndYear = [];
-
-
-nameUserInput.addEventListener('change', (event) => {
-    greetingsTitleUser = event.target.value;
-})
-
-nameUserSubmit.addEventListener('click', () => {
-    if(greetingsTitleUser.trim() !== '') {
-        greetingsTitle.innerText = `Добро пожаловать, ${greetingsTitleUser}!`;
-        localStorage.setItem('user', greetingsTitleUser);
-        nameUser.classList.remove('active-block');
-        greetings.classList.add('active-block');
-    }
-   
-})
-
-greetingsBtn.addEventListener('click', () => {
-    greetings.classList.remove('active-block');
-    filmGenre.classList.add('active-block');
-})
-
-filmGenreBtn.addEventListener('click', () => {
-   if(arrFilmGenre.length > 0) {
-    filmGenre.classList.remove('active-block');
-    releaseYear.classList.add('active-block');
-   }
-})
-
-realeseYearSubmit.addEventListener('click', () => {
-    if(arrRealeseYear.length > 0) {
-     releaseYear.classList.remove('active-block');
-     selectedFilms.classList.add('active-block');
-     console.log(resultArrGenreAndYear);
-    }
-})
-
-realeseYearBtn.addEventListener('click', () => {
-    arrRealeseYear.length = 0;
-    releaseYear.classList.remove('active-block');
-    selectedFilms.classList.add('active-block');
-    console.log(resultArrGenre);
-})
-
-selectedFilmsBtn.addEventListener('click', () => {
-    selectedFilms.classList.remove('active-block');
-    information.classList.add('active-block');
-})
-
-informationBtn.addEventListener('click', () => {
-    information.classList.remove('active-block');
-    selectedFilms.classList.add('active-block');
-})
-
-
-filmGenreItem.forEach((item) => {
-    item.addEventListener('click', setArrFilmGenre);
-    function setArrFilmGenre(event) {
-      if(item.checked) {
-        arrFilmGenre.push(event.target.id);
-      } else {
-        arrFilmGenre.splice(arrFilmGenre.indexOf(event.target.id), 1); 
-      }
-      sortByGenre(data, arrFilmGenre);
-    }
-});
-
- 
-realeseYearOption.addEventListener('click', setArrRealeseYear);
-function setArrRealeseYear(event) {
-     if(event.target.value === '80-89') {
-        arrRealeseYear.length = 0;
-        arrRealeseYear.push(80);
-    } else if (event.target.value === '90-99') {
-        arrRealeseYear.length = 0;
-        arrRealeseYear.push(90);
-    } else if (event.target.value === '00-09') {
-        arrRealeseYear.length = 0;
-        arrRealeseYear.push(0);
-    } else if (event.target.value === '10-21') {
-        arrRealeseYear.length = 0;
-        arrRealeseYear.push(10);
-    }
-    sortByYear(arrRealeseYear)
-}
-
-
-function sortByGenre(data, filterByGenre) {
-    data.forEach((item) => {
-        if(filterByGenre.includes(item.genre)) {
-            resultArrGenre.push(item);
-        }
-    })
-}
-
-function sortByYear(year) {
-    resultArrGenreAndYear = [];
-    resultArrGenre.forEach((item) => {
-        if(year.includes(item.yearforfilter)) {
-            resultArrGenreAndYear.push(item);
-        }   
-    })
-}
-
-
-function renderSelectedFilms () {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
- 
