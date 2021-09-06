@@ -664,21 +664,25 @@ const data = [
 //     } 
 // }
 // loadData();
-
+  
+//===================================================================
 
 const nameUser = document.querySelector('.name-user'); 
 const greetings = document.querySelector('.greetings'); 
 const filmGenre = document.querySelector('.film-genre'); 
 const releaseYear = document.querySelector('.release-year'); 
 const selectedFilms = document.querySelector('.selected-films'); 
-const information = document.querySelector('.information'); 
+const information = document.querySelector('.information');
+
+const selectedFilmsRow = document.querySelector('.selected-films__row');
+const informationBody = document.querySelector('.information__body');
 
 const nameUserSubmit = document.querySelector('.name-user__submit');
 const greetingsBtn = document.querySelector('.greetings__btn');
 const filmGenreBtn = document.querySelector('.film-genre__btn');
 const realeseYearSubmit = document.querySelector('.realese-year__submit');
 const realeseYearBtn = document.querySelector('.realese-year__btn');
-const selectedFilmsBtn = document.querySelector('.selected-films__btn');
+
 const informationBtn = document.querySelector('.information__btn');
 
 const nameUserInput = document.querySelector('.name-user__input');
@@ -703,11 +707,9 @@ nameUserInput.addEventListener('change', (event) => {
 nameUserSubmit.addEventListener('click', () => {
     if(greetingsTitleUser.trim() !== '') {
         greetingsTitle.innerText = `Добро пожаловать, ${greetingsTitleUser}!`;
-        localStorage.setItem('user', greetingsTitleUser);
         nameUser.classList.remove('active-block');
         greetings.classList.add('active-block');
     }
-   
 })
 
 greetingsBtn.addEventListener('click', () => {
@@ -719,6 +721,7 @@ filmGenreBtn.addEventListener('click', () => {
    if(arrFilmGenre.length > 0) {
     filmGenre.classList.remove('active-block');
     releaseYear.classList.add('active-block');
+    sortByGenre(data, arrFilmGenre);
    }
 })
 
@@ -726,7 +729,7 @@ realeseYearSubmit.addEventListener('click', () => {
     if(arrRealeseYear.length > 0) {
      releaseYear.classList.remove('active-block');
      selectedFilms.classList.add('active-block');
-     console.log(resultArrGenreAndYear);
+     sortByYear(arrRealeseYear);
     }
 })
 
@@ -734,13 +737,9 @@ realeseYearBtn.addEventListener('click', () => {
     arrRealeseYear.length = 0;
     releaseYear.classList.remove('active-block');
     selectedFilms.classList.add('active-block');
-    console.log(resultArrGenre);
+    renderSelectedFilms(resultArrGenre);
 })
 
-selectedFilmsBtn.addEventListener('click', () => {
-    selectedFilms.classList.remove('active-block');
-    information.classList.add('active-block');
-})
 
 informationBtn.addEventListener('click', () => {
     information.classList.remove('active-block');
@@ -756,7 +755,6 @@ filmGenreItem.forEach((item) => {
       } else {
         arrFilmGenre.splice(arrFilmGenre.indexOf(event.target.id), 1); 
       }
-      sortByGenre(data, arrFilmGenre);
     }
 });
 
@@ -776,7 +774,6 @@ function setArrRealeseYear(event) {
         arrRealeseYear.length = 0;
         arrRealeseYear.push(10);
     }
-    sortByYear(arrRealeseYear)
 }
 
 
@@ -793,20 +790,79 @@ function sortByYear(year) {
     resultArrGenre.forEach((item) => {
         if(year.includes(item.yearforfilter)) {
             resultArrGenreAndYear.push(item);
-        }   
+        }
+    })
+    renderSelectedFilms(resultArrGenreAndYear); 
+}
+
+
+function renderSelectedFilms(selectedMovies) {
+    selectedMovies.forEach((item) => {
+        let renderInfo = `
+        <div class="selected-films__colum">
+            <div class="selected-films__title">
+                <span>${item.movie}</span>    
+            </div>
+            <div class="selected-films__img">
+                <img src="${item.image}" alt="">
+            </div>
+            <button class="selected-films__btn btn" value="${item.id}">О фильме</button>
+        </div>
+        `
+        selectedFilmsRow.innerHTML += renderInfo;
+        const selectedFilmsBtn = document.querySelectorAll('.selected-films__btn');
+        selectedFilmsBtn.forEach((elem) => {
+            elem.addEventListener('click', createInfoPage);
+        })
     })
 }
 
+    function createInfoPage (event) {
+        let idMovie = event.target.value;
+        data.forEach((item) => {
+            if(item.id === idMovie) {
+                let renderInfoSelectedFilm = `
+                <div class="information__title">
+                    <span>${item.movie}</span>    
+                </div>
+                <div class="information__img">
+                    <img src="${item.image}" alt="poster">
+                </div>
+                <div class="information__year">
+                    Год:<span>${item.year}</span>
+                </div>
+                <div class="information__country">
+                    Страна:<span>${item.country}</span>
+                </div>
+                <div class="information__director">
+                    Режиссер:<span>${item.director}</span>
+                </div>
+                <div class="information__actors">
+                    Актеры:<span>${item.actors}</span>
+                </div>
+                <div class="information__plot">
+                    ${item.plot}
+                </div>
+                <div class="information__trailer">
+                    <div>Трейлер:</div> 
+                    ${item.trailer}
+                </div>
+                <div class="information__facts">
 
-function renderSelectedFilms () {
+                </div>
+        `
+            informationBody.innerHTML = renderInfoSelectedFilm;
+            }
+        }) 
+        selectedFilms.classList.remove('active-block');
+        information.classList.add('active-block');
+    }
 
-}
 
 
+        
 
-
-
-
+        
 
 
 
