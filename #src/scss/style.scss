@@ -58,181 +58,258 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 @import 'fonts';
 
+body {
+	background-color: #1c1a1a;
+}
 .header {
-
+	background-color: rgb(44, 44, 44);
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
+		h1{
+			color: rgb(255, 30, 0);
+			font-size: 46px;
+			padding: 25px 0px;
+			text-align: center;
+		}
 	}
 }
 .main {
+	background-color: #1c1a1a;
 }
+
+
 .name-user {
 	display: none;
-
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 97px 0px 97px 0px;
 	}
 
-	&__form {
+	&__box {
+		border: 10px solid rgba(255, 255, 0);
+		border-radius: 10px;
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
 	}
 
 	&__title {
+		color: rgba(255, 255, 0);
+    	font-size: 24px;
+		padding: 100px 0px 25px;
 	}
 
 	&__input {
+		font-size: 18px;
+		font-weight: 700;
+		border: 5px solid rgba(255, 255, 0);
+		border-radius: 5px;
+		padding: 5px 20px;
+		text-align: center;
 	}
 
 	&__submit {
+		font-size: 18px;
+		font-weight: 800;
+		background-color: rgba(255, 255, 0);
+		border-radius: 5px;
+		padding: 5px 20px;
+		margin: 50px 0px 75px;
+	}
+	&__submit:hover {
+		background-color: rgb(255, 30, 0);
 	}
 }
-.form {
-}
+ 
+
 .greetings {
 	display: none;
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	&__title {
+		color: rgba(255, 255, 0);
+    	font-size: 24px;
+		padding: 100px 0px 25px;
 	}
 
 	&__subtitle {
+		color: rgba(255, 255, 0);
+    	font-size: 18px;
+		padding: 0px 0px 25px;
 	}
 
 	&__btn {
+		font-size: 18px;
+		font-weight: 800;
+		background-color: rgba(255, 255, 0);
+		border-radius: 5px;
+		padding: 5px 20px;
+		margin: 50px 0px 287px;
+	}
+	&__btn:hover {
+		background-color: rgb(255, 30, 0);
 	}
 }
 .btn {
 }
 .film-genre {
 	display: none;
+	margin: 0 auto;
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	&__title {
+		color: rgba(255, 255, 0);
+    	font-size: 24px;
+		padding: 100px 0px 25px;
 	}
 
 	&__input {
+		color: rgba(255, 255, 0);
+    	font-size: 18px;
+		padding: 25px 0px 25px;
+		text-transform: uppercase;
+		label {
+			padding: 0px 15px 0px 0px;
+		}
+		label:hover {
+			color: rgb(255, 30, 0);
+		}
 	}
 
 	&__item {
-
-		&_drama {
-		}
-
-		&_adventure {
-		}
-
-		&_fantastic {
-		}
-
-		&_comedy {
-		}
-
-		&_action {
-		}
-
-		&_animation {
-		}
-
-		&_history {
-		}
-
-		&_criminal {
-		}
-
-		&_fantasy {
-		}
-
-		&_thriller {
-		}
-
-		&_horror {
-		}
+		 display: none;
 	}
 
 	&__btn {
+		font-size: 18px;
+		font-weight: 800;
+		background-color: rgba(255, 255, 0);
+		border-radius: 5px;
+		padding: 5px 20px;
+		margin: 50px 0px 261px;
+	}
+
+	&__btn:hover {
+		background-color: rgb(255, 30, 0);
 	}
 }
 .title {
+	color: yellow;
+    font-size: 24px;
 }
 .release-year {
 	display: none;
+	margin: 0 auto;
 }
 .realese-year {
 	
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	&__title {
+		color: rgba(255, 255, 0);
+    	font-size: 24px;
+		padding: 100px 0px 25px;
 	}
 
-	&__form {
+	&__option {
+		background-color: rgb(44, 44, 44);
+		color: rgba(255, 255, 0);
+		font-size: 18px;
+		border-radius: 5px;
+		margin: 25px 0px 25px;
 	}
 
 	&__submit {
+		font-size: 18px;
+		font-weight: 800;
+		background-color: rgba(255, 255, 0);
+		border-radius: 5px;
+		padding: 5px 20px;
+		margin: 100px 15px 207px;
+	}
+
+	&__submit:hover {
+		background-color: rgb(255, 30, 0);
 	}
 
 	&__btn {
+		font-size: 18px;
+		font-weight: 800;
+		background-color: rgba(255, 255, 0);
+		border-radius: 5px;
+		padding: 5px 20px;
+	}
+
+	&__btn:hover {
+		background-color: rgb(255, 30, 0);
 	}
 }
 .selected-films {
 	display: none;
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
 	}
 
 	&__title {
+		text-align: center;
+		padding: 50px 0px;
+	}
+
+	&__title-movie {
+
 	}
 
 	&__row {
-	}
-
-	&__colum {
-	}
-
-	&__img {
-	}
-
-	&__btn {
+		 
 	}
 }
 .information {
 	display: none;
 	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
 	}
 
-	&__title {
-	}
-
-	&__img {
-	}
-
-	&__year {
-	}
-
-	&__country {
-	}
-
-	&__director {
-	}
-
-	&__actors {
-	}
-
-	&__plot {
-	}
-
-	&__trailer {
-	}
-
-	&__facts {
-	}
 	&__btn {
-		
 	}
 }
+
+.footer {
+	background-color: rgb(44, 44, 44);
+	&__body {
+		max-width: 1400px;
+		margin: 0 auto;
+		h2 {
+			color: rgb(255, 30, 0);
+			font-size: 16px;
+			padding: 25px 0px;
+			text-align: center;
+			a {
+				color: rgb(255, 30, 0);
+			}
+		}
+	}
+}
+
 
 .active-block {
 	display: block;
 }
-
  
 
 

@@ -101,28 +101,256 @@ h6 {
   font-weight: 400;
 }
 
+body {
+  background-color: #1c1a1a;
+}
+
+.header {
+  background-color: #2c2c2c;
+}
+
+.header__body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header__body h1 {
+  color: #ff1e00;
+  font-size: 46px;
+  padding: 25px 0px;
+  text-align: center;
+}
+
+.main {
+  background-color: #1c1a1a;
+}
+
 .name-user {
   display: none;
+}
+
+.name-user__body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 97px 0px 97px 0px;
+}
+
+.name-user__box {
+  border: 10px solid yellow;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.name-user__title {
+  color: yellow;
+  font-size: 24px;
+  padding: 100px 0px 25px;
+}
+
+.name-user__input {
+  font-size: 18px;
+  font-weight: 700;
+  border: 5px solid yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.name-user__submit {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 50px 0px 75px;
+}
+
+.name-user__submit:hover {
+  background-color: #ff1e00;
 }
 
 .greetings {
   display: none;
 }
 
+.greetings__body {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.greetings__title {
+  color: yellow;
+  font-size: 24px;
+  padding: 100px 0px 25px;
+}
+
+.greetings__subtitle {
+  color: yellow;
+  font-size: 18px;
+  padding: 0px 0px 25px;
+}
+
+.greetings__btn {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 50px 0px 287px;
+}
+
+.greetings__btn:hover {
+  background-color: #ff1e00;
+}
+
 .film-genre {
   display: none;
+  margin: 0 auto;
+}
+
+.film-genre__body {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.film-genre__title {
+  color: yellow;
+  font-size: 24px;
+  padding: 100px 0px 25px;
+}
+
+.film-genre__input {
+  color: yellow;
+  font-size: 18px;
+  padding: 25px 0px 25px;
+  text-transform: uppercase;
+}
+
+.film-genre__input label {
+  padding: 0px 15px 0px 0px;
+}
+
+.film-genre__input label:hover {
+  color: #ff1e00;
+}
+
+.film-genre__item {
+  display: none;
+}
+
+.film-genre__btn {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 50px 0px 261px;
+}
+
+.film-genre__btn:hover {
+  background-color: #ff1e00;
+}
+
+.title {
+  color: yellow;
+  font-size: 24px;
 }
 
 .release-year {
   display: none;
+  margin: 0 auto;
+}
+
+.realese-year__body {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.realese-year__title {
+  color: yellow;
+  font-size: 24px;
+  padding: 100px 0px 25px;
+}
+
+.realese-year__option {
+  background-color: #2c2c2c;
+  color: yellow;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 25px 0px 25px;
+}
+
+.realese-year__submit {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 100px 15px 207px;
+}
+
+.realese-year__submit:hover {
+  background-color: #ff1e00;
+}
+
+.realese-year__btn {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.realese-year__btn:hover {
+  background-color: #ff1e00;
 }
 
 .selected-films {
   display: none;
 }
 
+.selected-films__body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.selected-films__title {
+  text-align: center;
+  padding: 50px 0px;
+}
+
 .information {
   display: none;
+}
+
+.information__body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: #2c2c2c;
+}
+
+.footer__body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer__body h2 {
+  color: #ff1e00;
+  font-size: 16px;
+  padding: 25px 0px;
+  text-align: center;
+}
+
+.footer__body h2 a {
+  color: #ff1e00;
 }
 
 .active-block {

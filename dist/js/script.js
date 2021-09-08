@@ -725,6 +725,7 @@ const informationBody = document.querySelector('.information__body');
 const nameUserSubmit = document.querySelector('.name-user__submit');
 const greetingsBtn = document.querySelector('.greetings__btn');
 const filmGenreBtn = document.querySelector('.film-genre__btn');
+const filmGenreLabel = document.querySelectorAll('.film-genre__label');
 const realeseYearSubmit = document.querySelector('.realese-year__submit');
 const realeseYearBtn = document.querySelector('.realese-year__btn');
 
@@ -746,7 +747,8 @@ let resultArrGenreAndYear = [];
 
 
 
-nameUserInput.addEventListener('change', () => {
+nameUserInput.addEventListener('input', () => {
+    nameUserInput.style.borderColor = 'rgb(255, 30, 0)';
     greetingsTitleUser = nameUserInput.value;
 })
 
@@ -799,8 +801,10 @@ filmGenreItem.forEach((item) => {
     function setArrFilmGenre(event) {
       if(item.checked) {
         arrFilmGenre.push(event.target.id);
+        ((event.target).nextElementSibling).style.color = 'rgb(255, 30, 0)';
       } else {
-        arrFilmGenre.splice(arrFilmGenre.indexOf(event.target.id), 1); 
+        arrFilmGenre.splice(arrFilmGenre.indexOf(event.target.id), 1);
+        ((event.target).nextElementSibling).style.color = 'rgba(255, 255, 0)'; 
       }
     }
 });
@@ -862,7 +866,7 @@ function renderSelectedFilms(selectedMovies) {
         selectedMovies.forEach((item) => {
             let renderInfo = `
             <div class="selected-films__colum">
-                <div class="selected-films__title">
+                <div class="selected-films__title-movie">
                     <span>${item.movie}</span>    
                 </div>
                 <div class="selected-films__img">
