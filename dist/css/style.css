@@ -101,7 +101,56 @@ h6 {
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "CenturyGothic";
+  font-display: swap;
+  src: url("../fonts/CenturyGothic.woff") format("woff"), url("../fonts/CenturyGothic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Italic";
+  font-display: swap;
+  src: url("../fonts/Poppins-Italic.woff") format("woff"), url("../fonts/Poppins-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  font-display: swap;
+  src: url("../fonts/Poppins-Light.woff") format("woff"), url("../fonts/Poppins-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
+  font-family: "CenturyGothic";
   background-color: #1c1a1a;
 }
 
@@ -117,6 +166,7 @@ body {
 .header__body h1 {
   color: #ff1e00;
   font-size: 46px;
+  font-weight: 800;
   padding: 25px 0px;
   text-align: center;
 }
@@ -132,7 +182,7 @@ body {
 .name-user__body {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 97px 0px 97px 0px;
+  padding: 97px 0px 93px 0px;
 }
 
 .name-user__box {
@@ -199,7 +249,7 @@ body {
   background-color: yellow;
   border-radius: 5px;
   padding: 5px 20px;
-  margin: 50px 0px 287px;
+  margin: 50px 0px 285px;
 }
 
 .greetings__btn:hover {
@@ -226,6 +276,7 @@ body {
 .film-genre__input {
   color: yellow;
   font-size: 18px;
+  font-weight: 800;
   padding: 25px 0px 25px;
   text-transform: uppercase;
 }
@@ -291,7 +342,7 @@ body {
   background-color: yellow;
   border-radius: 5px;
   padding: 5px 20px;
-  margin: 100px 15px 207px;
+  margin: 100px 15px 205px;
 }
 
 .realese-year__submit:hover {
@@ -322,15 +373,171 @@ body {
 .selected-films__title {
   text-align: center;
   padding: 50px 0px;
+  color: yellow;
+}
+
+.selected-films__title-movie {
+  color: #858080;
+  font-size: 16px;
+  padding: 25px 0px 25px 0px;
+}
+
+.selected-films__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.selected-films__colum {
+  width: 33.333%;
+}
+
+.selected-films__img {
+  margin: 0px 0px 20px 0px;
+  height: 570px;
+  overflow: hidden;
+  position: relative;
+}
+
+.selected-films__img img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.selected-films__img img:hover {
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
+          box-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
+}
+
+.selected-films__btn {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 0px 0px 35px 0px;
+}
+
+.selected-films__btn-none {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px 0 278px 140px;
+}
+
+.selected-films__btn:hover {
+  background-color: #ff1e00;
 }
 
 .information {
   display: none;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .information__body {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.information__title {
+  color: yellow;
+  font-size: 24px;
+  padding: 45px 0px 45px 45px;
+}
+
+.information__img {
+  margin: 0px 0px 25px 45px;
+  height: 570px;
+  overflow: hidden;
+  position: relative;
+}
+
+.information__img img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.information__year {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 20px 45px;
+}
+
+.information__country {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 20px 45px;
+}
+
+.information__rating {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 20px 45px;
+}
+
+.information__director {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 20px 45px;
+}
+
+.information__actors {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 20px 45px;
+}
+
+.information__plot {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 20px 45px;
+}
+
+.information__trailer {
+  margin: 0px 0px 20px 45px;
+}
+
+.information__trailer div {
+  font-size: 18px;
+  color: #ffe1e1;
+  margin: 0px 0px 15px 0px;
+}
+
+.information__btn {
+  font-size: 18px;
+  font-weight: 800;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 20px 0px 35px 45px;
+}
+
+.information__btn:hover {
+  background-color: #ff1e00;
 }
 
 .footer {

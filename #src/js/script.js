@@ -409,7 +409,7 @@ const data = [
     {
         id: '27', 
         genre: 'fantastic',
-        movie: 'Терминатор 2: Су́дный день/Terminator 2: Judgment Day',
+        movie: 'Терминатор 2: Судный день/Terminator 2: Judgment Day',
         image: 'img/terminator2.jpg',
         year: 1991,
         yearforfilter: 90, 
@@ -854,12 +854,12 @@ function renderSelectedFilms(selectedMovies) {
         <div class="selected-films__title">
             <span>Извините, фильмов по Вашим предпочтениям нет!</span>    
         </div>
-        <button class="selected-films__btn btn">Попробовать еще!</button>
+        <button class="selected-films__btn-none btn">Попробовать еще!</button>
         </div>
         `
         selectedFilmsRow.innerHTML += renderInfo;
-        const selectedFilmsBtn = document.querySelector('.selected-films__btn');
-        selectedFilmsBtn.addEventListener('click', () => {
+        const selectedFilmsBtnNone = document.querySelector('.selected-films__btn-none');
+        selectedFilmsBtnNone.addEventListener('click', () => {
             window.location.reload();
         })
     } else {
@@ -874,6 +874,7 @@ function renderSelectedFilms(selectedMovies) {
                 </div>
                 <button class="selected-films__btn btn" value="${item.id}">О фильме</button>
             </div>
+            
             `
             selectedFilmsRow.innerHTML += renderInfo;
             const selectedFilmsBtn = document.querySelectorAll('.selected-films__btn');
@@ -896,19 +897,19 @@ function renderSelectedFilms(selectedMovies) {
                     <img src="${item.image}" alt="poster">
                 </div>
                 <div class="information__year">
-                    Год:<span>${item.year}</span>
+                    Год:<span> ${item.year}</span>
                 </div>
                 <div class="information__country">
-                    Страна:<span>${item.country}</span>
+                    Страна:<span> ${item.country}</span>
                 </div>
                 <div class="information__rating">
-                    Рейтинг IMDb:<span>${item.rating}</span>
+                    Рейтинг IMDb: <i class="fas fa-star"></i> <span> ${item.rating}</span>
                 </div>
                 <div class="information__director">
-                    Режиссер:<span>${item.director}</span>
+                    Режиссер:<span> ${item.director}</span>
                 </div>
                 <div class="information__actors">
-                    Актеры:<span>${item.actors}</span>
+                    Актеры:<span> ${item.actors}</span>
                 </div>
                 <div class="information__plot">
                     ${item.plot}
